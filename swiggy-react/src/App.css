@@ -223,3 +223,27 @@
   display: flex;
 }
 
+#inputfield1{
+  width:800px;
+  height: 50px;
+  margin-left: 200px;
+  margin-top: 50px;
+ 
+}
+
+#searchbox1{
+  display: flex;
+  /* border: 1px solid black; */
+}
+
+ #searchsubmit1{
+border:1px solid black;
+margin-left: 900px;
+/* margin-top: 75px; */
+height:50px;
+width:100px;
+background-color: yellow; } 
+
+
+
+

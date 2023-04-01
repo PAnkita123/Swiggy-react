@@ -7,6 +7,7 @@ import { faTags } from '@fortawesome/free-solid-svg-icons';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import Searchbar from './Searchbar.jsx'
 
 
 const Effect = () => {
@@ -51,6 +52,7 @@ const Effect = () => {
     
   }, []);
 
+  
   return (
     <>
     <div id="top">
@@ -60,6 +62,7 @@ const Effect = () => {
       </div>
       <div id="right">
           <div><FontAwesomeIcon icon={faSearch} size="1x" color="black" className="my-icon" />
+          
 Search</div>
           <div><FontAwesomeIcon icon={faTags} size="1x" color="black" className="my-icon" />
 Offers</div>
@@ -70,10 +73,11 @@ Help</div>
 Cart</div>
         </div>
     </div>
-      <div id="products">
+    <Searchbar/>
+      <div id="products" >
         {products &&
           products.drinks.map((drink) => (
-            <div key={drink.idDrink}>
+            <div key={drink.idDrink} onClick ={() =>router(`/Effect/${drink.idDrink}`)}>
               <img src={drink.strDrinkThumb} alt={drink.strDrink} />
               <h4>{drink.strDrink}</h4>
               <p>Price Rs. 250/-</p>
@@ -85,7 +89,9 @@ Cart</div>
               </button>
             </div>
           ))}
+          
       </div>
+      
     </>
   );
 };

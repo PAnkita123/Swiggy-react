@@ -8,6 +8,9 @@ import Home from './components/Home.jsx'
 import Logout from './components/Logout.jsx'
 // import toast, { useToaster } from 'react-hot-toast/headless';
 import Cart from './components/Cart.jsx'
+import SingleProductPage from './components/SingleProductPage'
+import Search from './components/Search.jsx'
+import Searchbar from './components/Searchbar.jsx'
 
 function App() {
   return (
@@ -26,8 +29,9 @@ function App() {
         <Route exact path='/Effect' element={<Effect/>}/>
         <Route exact path='/Logout' element={<Logout/>}/>
         <Route exact path='/Cart' element={<Cart/>}/>
-      
-
+        <Route exact path ='/Effect/:id' element={<SingleProductPage/>}/>
+        <Route exact path ='/Search/:name' element={<Search/>}/>
+        <Route exact path='/Searchbar' element={<Searchbar/>}/>
 
       </Routes>
 
