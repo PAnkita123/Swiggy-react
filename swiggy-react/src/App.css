@@ -232,17 +232,35 @@
 }
 
 #searchbox1{
-  display: flex;
+  /* display: flex; */
   /* border: 1px solid black; */
+  /* position: relative; */
+  width:100%;
+  flex-direction: column;
+}
+
+#searchbox1>form{
+  display: flex;
+  width:80%;
+}
+
+#searchbox1>form>input{
+  width:7000px;
+  height: 50px;
+  margin-left: 200px;
+  margin-top: 50px;
 }
 
  #searchsubmit1{
 border:1px solid black;
-margin-left: 900px;
-/* margin-top: 75px; */
-height:50px;
-width:100px;
-background-color: yellow; } 
+/* margin-left: 900px; */
+margin-top: 50px;
+height:60px;
+width:800px;
+background-color: yellow;}
+/* /* position: absolute;
+top:0;
+right:0; }   */
 
 
 

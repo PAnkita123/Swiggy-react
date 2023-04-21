@@ -5,6 +5,7 @@ import './Login.css';
 function Login(props) {
   const [userData, setUserData] = useState({ email: "", password: "" });
   const router = useNavigate();
+  
 
   function loginSubmit(event) {
     event.preventDefault();
@@ -40,50 +41,32 @@ function Login(props) {
   }
 
   return (
-    // <div id="login1">
-    //         <div id="register">
-    //             <div onClick={props.onClose}>X</div>
-    //             <div id="top">
-    //                 <div>
-    //                     <div>Login</div>
-    //                     <div>
-    //                         or <a>create an account</a>
-    //                     </div>
-    //                     <div></div>
-    //                 </div>
-    //                 <div>
-    //                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r" alt="img" />
-    //                 </div>
-    //             </div>
-    //             <form onSubmit={(event) => loginSubmit(event)}>
-    //                 <label>Email</label><br />
-    //                 <input onChange={updatingData} name='email' value={userData.email} type="email" /><br />
-    //                 <label>Password</label><br />
-    //                 <input onChange={updatingData} name='password' value={userData.password} type="password" /><br />
-    //                 <input id="input" type="submit" value="LOGIN" />
-    //                 <div>By creating an account, I accept the Terms & Conditions & Privacy Policy</div>
+    <div id="login1">
+            <div id="register">
+                <div onClick={props.onClose}>X</div>
+                <div id="top">
+                    <div>
+                        <div>Login</div>
+                        <div>
+                            or <a>create an account</a>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r" alt="img" />
+                    </div>
+                </div>
+                <form onSubmit={(event) => loginSubmit(event)}>
+                    <label>Email</label><br />
+                    <input onChange={updatingData} name='email' value={userData.email} type="email" /><br />
+                    <label>Password</label><br />
+                    <input onChange={updatingData} name='password' value={userData.password} type="password" /><br />
+                    <input id="input" type="submit" value="LOGIN" />
+                    <div>By creating an account, I accept the Terms & Conditions & Privacy Policy</div>
 
-        //         </form>
-        //     </div>
-        // </div>
-        <div id='login-fullpage'>
-     <div id='login-page'>
-        <div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/512px-Instagram_logo.svg.png" alt="" />
+                </form>
+            </div>
         </div>
-        <div>
-            <form>
-                <input type="text" placeholder='Enter your email' />
-                <br />
-                <input type="Password" placeholder='Password' />
-                <br />
-                <input type="submit" value="Login" />
-            </form>
-        </div>
-
-     </div>
-
-    </div>
   );
 }
 
